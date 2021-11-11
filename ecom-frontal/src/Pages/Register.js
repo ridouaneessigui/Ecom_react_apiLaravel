@@ -1,13 +1,20 @@
-import React,{useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import React,{useState,useEffect} from 'react'
+import {useHistory} from 'react-router-dom'
+import Header from './Header'
 function Register() {
+   
     const [nom_complet,setName]=useState("")
     const [password,setPassword]=useState("")
     const [email,setEmail]=useState("")
-    const history = useHistory();
+    const history = useHistory()
+    useEffect(() => {
+        if(localStorage.getItem('user-info'))
+        {
+        history.push("/ajouter")
+    }
+    }, [])
     async function signUp() {
         let item={nom_complet,password,email};
-        console.warn(item)
         let resul = await fetch("http://127.0.0.1:8000/api/register",{
             method:'POST',
             body:JSON.stringify(item),
@@ -22,6 +29,8 @@ function Register() {
         history.push("/ajouter")
     }
     return(
+        <section>
+        <Header />
         <div className="col-sm-6 offset-sm-3">
             <br />
             <h1>Registrer</h1>
@@ -34,6 +43,7 @@ function Register() {
             <br />
             <button onClick={signUp} className="btn btn-primary">Sign Up</button>
         </div>
+        </section>
     )   
 }
 export default Register

@@ -33,15 +33,12 @@
 }
 .navbar_warpper
 {
-  padding-left: 30px;
+  margin-left: 30px;
+  color:chocolate;
 }
-.navbar_warpperL
+.navbar_warpper:hover
 {
-  padding-left: 750px;
-}
-.navbar_warpperR
-{
-  padding-left: 30px;
+  color: darkgoldenrod;
 }
 @keyframes App-logo-spin {
   from {

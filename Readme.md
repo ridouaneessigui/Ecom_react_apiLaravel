@@ -35,6 +35,12 @@ react-router-dom
         return $user;
 
         }
-##    Postman
+ ##    Postman
      -  http://127.0.0.1:8000/api/register
      -  
+ ## react 
+    - Local storage set et get item 
+# Parte 3 
+ ## Laravel
+   - add bd produits manualle local host
+   - php artisan make:controller ProduitController
