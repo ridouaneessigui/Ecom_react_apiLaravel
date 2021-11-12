@@ -33,7 +33,7 @@ class ProduitController extends Controller
     }
     function getProduit()
     {
-        return Produit::all();
+        return Produit::find($id);
     }
 
 }

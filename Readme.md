@@ -74,3 +74,7 @@ react-router-dom
  - modifier ajouterproduit
  - ajouter list produits
 ## partie 4
+  - function getProduit() laravel 
+
+## Resultat final
+![Final](Capture.JPG)
