@@ -19,7 +19,8 @@ function Header() {
             {
             localStorage.getItem('user-info')  ?
               <strong>
-                <Link className="navbar_warpper" to="/ajouter">AJOOUTER</Link>
+                <Link className="navbar_warpper" to="/">Liste des produits</Link>
+                <Link className="navbar_warpper" to="/ajouter">AJOUTER</Link>
                 <Link className="navbar_warpper" to="/Modifier">MODIFIER</Link>
               </strong>
             :

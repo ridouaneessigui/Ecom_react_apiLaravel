@@ -64,5 +64,11 @@ react-router-dom
     }
 
     - AP -> Route::get('list',[ProduitController::class,'list']);
+    - config\filesystems.php  -> 'links' => [
+        public_path('Produits') => storage_path('app/Produits'),
+    ],
+    - php artisan storage:link
+
 ## react 
  - modifier ajouterproduit
+ - ajouter list produits

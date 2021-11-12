@@ -23,5 +23,9 @@ class ProduitController extends Controller
     {
         return Produit::all();
     }
+    function delete($id)
+    {
+        return Produit::all();
+    }
 
 }
