@@ -44,3 +44,18 @@ react-router-dom
  ## Laravel
    - add bd produits manualle local host
    - php artisan make:controller ProduitController
+   - php artisan make:Model Produit
+   - API -> Route::post('ajouterproduit',[ProduitController::class,'ajouterproduit']);
+   -     function ajouterproduit(Request $req)
+    {
+        $produit=new Produit;
+        $produit->nom=$req->input('nom');
+        $produit->prix=$req->input('prix');
+        $produit->file_path=$req->file('file')->store('produits');
+        $produit->description=$req->input('description');
+       // return $req->file('file')->store('produits');
+       $produit->save();
+       return $produit;
+    }
+## react 
+ - modifier ajouterproduit
