@@ -57,5 +57,12 @@ react-router-dom
        $produit->save();
        return $produit;
     }
+
+    - function list()
+    {
+        return Produit::all();
+    }
+
+    - AP -> Route::get('list',[ProduitController::class,'list']);
 ## react 
  - modifier ajouterproduit
