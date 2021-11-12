@@ -25,6 +25,14 @@ class ProduitController extends Controller
     }
     function delete($id)
     {
+        $result = Produit:: where('id',$id)->delete();
+        if($result)
+        {
+            return["result"=>"produit a ete bien supprimer"];
+        }
+    }
+    function getProduit()
+    {
         return Produit::all();
     }
 

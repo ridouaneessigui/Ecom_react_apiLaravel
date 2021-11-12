@@ -51,4 +51,13 @@
 .imghover:hover
 {
   width: 200px;
+  height: 200px;
+}
+.sup
+{
+background-color: #DDB771;
+color: #fff;
+padding: 5px;
+border-radius: 5px;
+cursor: pointer;
 }

@@ -68,7 +68,9 @@ react-router-dom
         public_path('Produits') => storage_path('app/Produits'),
     ],
     - php artisan storage:link
-
+    - delete product
+    - Route::delete('delete/{id}',[ProduitController::class,'delete']);
 ## react 
  - modifier ajouterproduit
  - ajouter list produits
+## partie 4
